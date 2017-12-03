@@ -521,5 +521,3 @@ function channelIDOrDM(channel) {
 	if(channel.type !== 'dm') return channel.id;
 	return 'dm';
 }
-
-module.exports = CommandoMessage;

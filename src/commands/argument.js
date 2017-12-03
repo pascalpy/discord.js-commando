@@ -121,7 +121,7 @@ class Argument {
 
 	/**
 	 * Prompts the user and obtains the value for the argument
-	 * @param {CommandMessage} msg - Message that triggered the command
+	 * @param {CommandoMessage} msg - Message that triggered the command
 	 * @param {string} [value] - Pre-provided value for the argument
 	 * @param {number} [promptLimit=Infinity] - Maximum number of times to prompt for the argument
 	 * @return {Promise<ArgumentResult>}
@@ -206,7 +206,7 @@ class Argument {
 
 	/**
 	 * Prompts the user and obtains multiple values for the argument
-	 * @param {CommandMessage} msg - Message that triggered the command
+	 * @param {CommandoMessage} msg - Message that triggered the command
 	 * @param {string[]} [values] - Pre-provided values for the argument
 	 * @param {number} [promptLimit=Infinity] - Maximum number of times to prompt for the argument
 	 * @return {Promise<ArgumentResult>}
@@ -321,7 +321,7 @@ class Argument {
 	/**
 	 * Checks if a value is valid for the argument
 	 * @param {string} value - Value to check
-	 * @param {CommandMessage} msg - Message that triggered the command
+	 * @param {CommandoMessage} msg - Message that triggered the command
 	 * @return {boolean|string|Promise<boolean|string>}
 	 */
 	validate(value, msg) {
@@ -332,7 +332,7 @@ class Argument {
 	/**
 	 * Parses a value string into a proper value for the argument
 	 * @param {string} value - Value to parse
-	 * @param {CommandMessage} msg - Message that triggered the command
+	 * @param {CommandoMessage} msg - Message that triggered the command
 	 * @return {*|Promise<*>}
 	 */
 	parse(value, msg) {
@@ -343,7 +343,7 @@ class Argument {
 	/**
 	 * Checks whether a value for the argument is considered to be empty
 	 * @param {string} value - Value to check for emptiness
-	 * @param {CommandMessage} msg - Message that triggered the command
+	 * @param {CommandoMessage} msg - Message that triggered the command
 	 * @return {boolean}
 	 */
 	isEmpty(value, msg) {

@@ -288,7 +288,7 @@ module.exports = Structures.extend('Message', Message => {
 					if(!shouldEdit) return this.channel.send(content, options);
 					return this.editCurrentResponse(channelIDOrDM(this.channel), { type, content, options });
 				case 'reply':
-					if(!shouldEdit) return this.reply(content, options);
+					if(!shouldEdit) return super.reply(content, options);
 					if(options && options.split && !options.split.prepend) options.split.prepend = `${this.author}, `;
 					return this.editCurrentResponse(channelIDOrDM(this.channel), { type, content, options });
 				case 'direct':
